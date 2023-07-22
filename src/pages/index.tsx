@@ -1,5 +1,13 @@
 import Image from 'next/image'
 import Header from '@/components/Header'
+import TwitterButton from '@/atoms/Top/TwitterButton'
+import SubContentLabel from '@/atoms/Top/SubContentLabel.tsx'
+import GlassCard from '@/components/Top/GlassCard'
+import History from '@/components/Top/History'
+import LoveList from '@/components/Top/LoveList'
+import DailyList from '@/components/Top/DailyList'
+import SometimesList from '@/components/Top/SometimesList'
+import StudyingList from '@/components/Top/StudyingList'
 
 export default function Home() {
   return (
@@ -40,75 +48,92 @@ export default function Home() {
           />
         </div>
 
-        <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={`mb-3 text-2xl font-semibold`}>
-              Docs{' '}
-              <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-                -&gt;
-              </span>
-            </h2>
-            <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-              Find in-depth information about Next.js features and API.
-            </p>
-          </a>
+        <GlassCard>
+          <SubContentLabel title="Profile" />
+          Social Medias <br />
+          <TwitterButton
+            userName="NashiUsaBoy"
+            link="https://twitter.com/NashiUsaBoy?ref_src=twsrc%5Etfw"
+          />
+          <br />
+          <div>
+            Handle: 梨兎 / nashiusagi / nashiusaboy
+            <br />
+            Real Name: Ryogo Ito / 伊藤諒悟
+            <br />
+            Old Account: @Ryogo-san
+            <br />
+          </div>
+        </GlassCard>
 
-          <a
-            href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={`mb-3 text-2xl font-semibold`}>
-              Learn{' '}
-              <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-                -&gt;
-              </span>
-            </h2>
-            <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-              Learn about Next.js in an interactive course with&nbsp;quizzes!
-            </p>
-          </a>
+        <GlassCard>
+          <SubContentLabel title="History" />
+          <History />
+        </GlassCard>
 
-          <a
-            href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={`mb-3 text-2xl font-semibold`}>
-              Templates{' '}
-              <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-                -&gt;
-              </span>
-            </h2>
-            <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-              Explore the Next.js 13 playground.
-            </p>
-          </a>
+        <GlassCard>
+          <SubContentLabel title="Programming Skills" />
+          <LoveList />
+          <DailyList />
+          <SometimesList />
+          <StudyingList />
+        </GlassCard>
 
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={`mb-3 text-2xl font-semibold`}>
-              Deploy{' '}
-              <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-                -&gt;
-              </span>
-            </h2>
-            <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-              Instantly deploy your Next.js site to a shareable URL with Vercel.
-            </p>
-          </a>
-        </div>
+        <GlassCard>
+          <SubContentLabel title="Commitments" />
+          <div className="ml-4">
+            <h3 className="text-xl font-bold">
+              International Conference (Reviewed)
+            </h3>
+            <ul className="list-disc ml-8 mb-4">
+              <li>
+                <a className="font-bold">Ryogo Ito</a>, Mitsuhiro Uchida, and
+                Suguru Saito. Decision of Line Structure beyond Junctions Using
+                U-Net-Based CNN for Line Drawing Rendering. SIGGRAPH Asia 2021
+                Posters. 2021.
+              </li>
+            </ul>
+            <h3 className="text-xl font-bold">
+              Domestic Conference (Reviewed)
+            </h3>
+            <ul className="list-disc ml-8 mb-4">
+              <li>
+                <a className="font-bold">伊藤 諒悟</a>, 齋藤 豪, 森合 遼.
+                疑似相対深度推定によるイラストへの重なりを考慮した差し込み.
+                VC+VCC2022, 2022.
+              </li>
+            </ul>
+            <h3 className="text-xl font-bold">
+              Domestic Conference (UnReviewed)
+            </h3>
+            <ul className="list-disc ml-8 mb-4">
+              <li>
+                <a className="font-bold">伊藤 諒悟</a>, 齋藤 豪, 内田 光洋.
+                U-NetベースのCNNを用いた結節点における線分接続判定.
+                VC+VCC2021ポスター. 2021.
+              </li>
+              <li>
+                <a className="font-bold">伊藤 諒悟</a>, 齋藤 豪, 森合 遼.
+                線画像における相対深度グラフ作成手法とそれを用いた線画像の差し込み編集法.
+                CGVI第189回研究発表会. 2023.
+              </li>
+              <li>
+                <a className="font-bold">伊藤 諒悟</a>, 齋藤 豪, 森合 遼.
+                相対的深度情報グラフを用いた線画像の差し込み編集法.
+                情報処理学会第85回全国大会. 2023. （学生奨励賞受賞）
+              </li>
+            </ul>
+            <h3 className="text-xl font-bold">Journal Paper</h3>
+            <ul className="list-disc ml-8 mb-4">
+              <li>
+                Dingkun Yan, <a className="font-bold">Ryogo Ito</a>, Ryo Moriai,
+                and Suguru Saito. Two-step Training: Adjustable Sketch
+                Colorization via Reference Image and Text Tag. Computer Graphics
+                Forum. TBD.
+              </li>
+            </ul>
+          </div>
+        </GlassCard>
       </main>
     </div>
   )
