@@ -8,6 +8,10 @@ import LoveList from '@/components/Top/LoveList'
 import DailyList from '@/components/Top/DailyList'
 import SometimesList from '@/components/Top/SometimesList'
 import StudyingList from '@/components/Top/StudyingList'
+import { dailyContent } from '@/data/Top/dailyContent'
+import { loveContent } from '@/data/Top/loveContent'
+import { sometimesContent } from '@/data/Top/sometimesContent'
+import { studyingContent } from '@/data/Top/studyingContent'
 
 export default function Home() {
   return (
@@ -73,10 +77,10 @@ export default function Home() {
 
         <GlassCard>
           <SubContentLabel title="Programming Skills" />
-          <LoveList />
-          <DailyList />
-          <SometimesList />
-          <StudyingList />
+          <LoveList loveContent={loveContent} />
+          <DailyList dailyContent={dailyContent} />
+          <SometimesList sometimesContent={sometimesContent} />
+          <StudyingList studyingContent={studyingContent} />
         </GlassCard>
 
         <GlassCard>
