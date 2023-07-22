@@ -1,13 +1,15 @@
 import Link from 'next/link'
+import DarkModeToggler from '@/atoms/Common/DarkModeToggler'
 
 export default function Header() {
   return (
     <header>
-      <nav className="h-30 bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
+      <nav className="h-30 bg-sky-500 border-sky-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
         <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
           NashiUsa.io
           <div className="flex items-center lg:order-2">
             <Link href="/contact">Contact</Link>
+            <DarkModeToggler />
             <button
               data-collapse-toggle="mobile-menu-2"
               type="button"
