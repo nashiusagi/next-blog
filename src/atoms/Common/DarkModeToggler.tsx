@@ -22,14 +22,17 @@ export default function DarkModeToggler() {
   }, [isDarkMode])
 
   return (
-    <div>
-      <button className="p-2" onClick={toggle}>
+    <>
+      <a
+        className="w-10 h-10 p-4 overflow-hidden inline-flex items-center ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+        onClick={toggle}
+      >
         {isDarkMode === 'dark' ? (
           <FontAwesomeIcon icon={faSun} />
         ) : (
           <FontAwesomeIcon icon={faMoon} />
         )}
-      </button>
-    </div>
+      </a>
+    </>
   )
 }
