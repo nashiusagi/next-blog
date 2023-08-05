@@ -9,7 +9,6 @@ export default function Header() {
   const toggleNavigation = () => {
     setOpen((prevState) => !prevState)
   }
-  console.log(open)
 
   return (
     <header className="relative flex-col h-20 my-4">
